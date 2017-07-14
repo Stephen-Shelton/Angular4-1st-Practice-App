@@ -17,12 +17,12 @@
     <h2><a target="_blank" href="http://angularjs.blogspot.ca/">Angular blog</a></h2>
   </li>
 </ul>-->
-<app-header></app-header>
+<app-header (listener)="showRecipesOrShoppingList($event)"></app-header>
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <app-recipes></app-recipes>
-      <app-shopping-list></app-shopping-list>
+      <app-recipes *ngIf="recipes"></app-recipes>
+      <app-shopping-list *ngIf="shoppingList"></app-shopping-list>
     </div>
   </div>
 </div>
